@@ -8,6 +8,6 @@ void kernel_main(void)
 {
 	init();
 	write("Hello, kernel World!\n");
-    	oops('Test err');
+    	oops("Test err");
 }
  
