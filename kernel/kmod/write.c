@@ -98,6 +98,7 @@ void terminal_putchar(char c)
         		}
         		terminal_row = VGA_HEIGHT-1;
     		}
+		}
 	}
 }
 
