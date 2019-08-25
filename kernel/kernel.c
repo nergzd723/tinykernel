@@ -6,8 +6,7 @@
 
 void kernel_main(void) 
 {
-	terminal_setcolor(15,0);
-	init();
+	init("VGA_COLOR_BLACK", "VGA_COLOR_WHITE");
 	write("Hello, kernel World!\n");
 	clsdrv();
 	printart();
