@@ -7,7 +7,7 @@
 
 void kernel_main(void) 
 {
-	init(VGA_COLOR_BLACK, VGA_COLOR_WHITE);
+	init();
 	write("Hello, kernel World!\n");
 	clsdrv();
 	printart();
