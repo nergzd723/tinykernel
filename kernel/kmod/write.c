@@ -49,7 +49,7 @@ size_t terminal_column;
 uint8_t terminal_color;
 uint16_t* terminal_buffer;
 
-void init(char* cbg, char* cfg) 
+void init(enum vga_color cbg, enum vga_color cfg) 
 {
 	terminal_row = 0;
 	terminal_column = 0;
