@@ -10,8 +10,5 @@ void kernel_main(void)
 	init();
 	printart();
 	clsdrv();
-	printart();
-	clsdrv();
-	printart();
 }
  
