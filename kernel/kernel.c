@@ -8,14 +8,10 @@
 void kernel_main(void) 
 {
 	init();
-	write("Hello, kernel World!\n");
-	for (int i = 0; i<1000000; i++){
-		writed(i);
-		write("\n");
-		if (i == 10000){
-			oops("BUFF_OVERFLOW");
-		}
+	for (int i = 0; i<24, i++){
+		write("Hello, kernel World!\n");
 	}
+	write("Hello, kernel World. Should be at newline!\n");
 	
 }
  
