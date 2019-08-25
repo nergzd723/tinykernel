@@ -11,7 +11,5 @@ void kernel_main(void)
 	for (int i = 0; i<24; i++){
 		write("Hello, kernel World!\n");
 	}
-	write("Hello, kernel World. Should be at newline!\n");
-	
 }
  
