@@ -8,9 +8,10 @@
 void kernel_main(void) 
 {
 	init();
-	for (int i = 0; i<24; i++){
-		write("Hello, kernel World!\n");
-	}
+	printart();
+	clsdrv();
+	printart();
+	clsdrv();
 	printart();
 }
  
