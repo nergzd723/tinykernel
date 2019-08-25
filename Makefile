@@ -15,4 +15,3 @@ all:
 	cp tinykernel.bin isodir/boot/tinykernel.bin
 	cp grub.cfg isodir/boot/grub/grub.cfg
 	grub-mkrescue -o tinykernel.iso isodir
-	cp isodir/boot/tinykernel.iso tinykernel.iso
