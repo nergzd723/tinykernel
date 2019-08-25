@@ -65,7 +65,7 @@ void init(void)
 
 void terminal_setcolor(int colorbg, int colorfg) 
 {
-	terminal_color = color;
+	terminal_color = colorbg, colorfg;
 }
 
 void terminal_putentryat(char c, uint8_t color, size_t x, size_t y)             //piece of code to compute where the entry char would be
