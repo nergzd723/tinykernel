@@ -74,17 +74,6 @@ void terminal_putentryat(char c, uint8_t color, size_t x, size_t y)             
 	terminal_buffer[index] = vga_entry(c, color);
 }
 
-void clsdrv()
-{
-	for (int c = 0; c < 2000; c++){
-		
-		write(" ");
-	}
-	terminal_row = 0;
-	terminal_column = 0;
-
-}
-
 void terminal_putchar(char c) 
 {
 	if (c == '\n'){
@@ -98,11 +87,6 @@ void terminal_putchar(char c)
 		if (++terminal_row == VGA_HEIGHT)
 			terminal_row = 0;
 		}
-		if(terminal_row >= VGA_HEIGHT) {
-			clsdrv();
-			terminal_row = 0;
-			terminal_column = 0;
-    		}
 		}
 	}
 
@@ -141,4 +125,15 @@ void writed(const int data){
 	terminal_write(m, strlen(m));
 }
 
+
+void clsdrv()
+{
+	for (int c = 0; c < 2000; c++){
+		
+		write(" ");
+	}
+	terminal_row = 0;
+	terminal_column = 0;
+
+}
 
