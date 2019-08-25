@@ -65,7 +65,7 @@ void init(void)
 
 void terminal_setcolor(int colorbg, int colorfg) 
 {
-	terminal_color = colorbg, colorfg;
+	terminal_color = colorbg;
 }
 
 void terminal_putentryat(char c, uint8_t color, size_t x, size_t y)             //piece of code to compute where the entry char would be
@@ -130,8 +130,8 @@ char* inttostr( int zahl )
 }
 
 void writed(const int data){
-	char* m = inttostr(data)
-	terminal_write(m, strlen(m))
+	char* m = inttostr(data);
+	terminal_write(m, strlen(m));
 }
 
 
