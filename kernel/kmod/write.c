@@ -41,7 +41,7 @@ size_t strlen(const char* str)
 }
 
 static const size_t VGA_WIDTH = 80;
-static const size_t VGA_HEIGHT = 80;
+static const size_t VGA_HEIGHT = 25;
  
 
 size_t terminal_row;
@@ -63,7 +63,7 @@ void init(void)
 	}
 }
 
-void terminal_setcolor(uint8_t color) 
+void terminal_setcolor(int colorbg, int colorfg) 
 {
 	terminal_color = color;
 }
