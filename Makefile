@@ -4,7 +4,7 @@ kernel = kernel/
 kmod = $(kernel)kmod/
 TDIR = ~/i686-x0r3d-elf/bin/
 all:
-	$(TDIR)$(cc)-as $(boot) boot.S -o boot.o
+	$(TDIR)$(cc)-as $(boot)boot.S -o boot.o
 	$(TDIR)$(cc)-gcc -c $(kernel)kernel.c $(kmod)panic.c $(kmod)write.c -o kernel.o -std=gnu99 -ffreestanding -O2 -Wall -Wextra -Iinclude
 	$(TDIR)$(cc)-gcc -T $(boot)linker.ld -o tinykernel.bin -ffreestanding -O2 -nostdlib boot.o kernel.o -lgcc
 	grub-file --is-x86-multiboot myos.bin
