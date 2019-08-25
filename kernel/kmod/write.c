@@ -96,6 +96,17 @@ void terminal_putchar(char c)
 		if (++terminal_row == VGA_HEIGHT)
 			terminal_scroll();
 		}
+		if(terminal_row >= VGA_HEIGHT) {
+        		size_t i, j;
+        		for(i = 0; i < VGA_WIDTH-1; i++) {
+            			for(j = VGA_HEIGHT-2; j > 0; j--) {
+               		 		terminal_buffer[(j * VGA_WIDTH) + i] = terminal_buffer[((j+1) * VGA_WIDTH) + i];
+            			}               
+        		for(i = 0; i < VGA_WIDTH-1; i++) {
+            			terminal_putentryat(' ', terminal_color, i, VGA_HEIGHT-1);
+        		}
+        		terminal_row = VGA_HEIGHT-1;
+    		}
 	}
 }
 
