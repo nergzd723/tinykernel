@@ -74,6 +74,14 @@ void terminal_putentryat(char c, uint8_t color, size_t x, size_t y)             
 	terminal_buffer[index] = vga_entry(c, color);
 }
 
+void terminal_scroll(){
+    for(int i = 0; i < vga_height; i++){
+        for (int m = 0; m < vga_width; m++){
+            terminal_buffer[i * vga_width + m] = terminal_buffer[(i + 1) * vga_width + m];
+        }
+    }
+}
+
 void terminal_putchar(char c) 
 {
 	if (c == '\n'){
@@ -86,7 +94,7 @@ void terminal_putchar(char c)
 		if (++terminal_column == VGA_WIDTH) {
 			terminal_column = 0;
 		if (++terminal_row == VGA_HEIGHT)
-			terminal_row = 0;
+			terminal_scroll();
 		}
 	}
 }
