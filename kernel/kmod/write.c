@@ -101,3 +101,13 @@ void write(const char* data)
 {
 	terminal_write(data, strlen(data));
 }
+
+void clsdrv()
+{
+	for (int c = 0; c < 2000; c++){
+		write(" ");
+		if (terminal_row == 80){
+			break;
+		}
+	}
+}
