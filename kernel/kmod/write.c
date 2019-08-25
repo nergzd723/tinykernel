@@ -49,11 +49,11 @@ size_t terminal_column;
 uint8_t terminal_color;
 uint16_t* terminal_buffer;
 
-void init(enum vga_color cbg, enum vga_color cfg) 
+void init(void) 
 {
 	terminal_row = 0;
 	terminal_column = 0;
-	terminal_color = vga_entry_color(cbg, cfg);            //init a terminal
+	terminal_color = vga_entry_color(VGA_COLOR_BLACK, VGA_COLOR_WHITE);            //init a terminal
 	terminal_buffer = (uint16_t*) 0xB8000;
 	for (size_t y = 0; y < VGA_HEIGHT; y++) {
 		for (size_t x = 0; x < VGA_WIDTH; x++) {
