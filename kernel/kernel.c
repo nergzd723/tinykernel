@@ -11,6 +11,7 @@ void kernel_main(void)
 	write("Hello, kernel World!\n");
 	for (int i = 0; i<1000000; i++){
 		writed(i);
+		write("\n");
 	}
 	oops("BAD_FILENAME");
 	
