@@ -78,7 +78,7 @@ void terminal_putchar(char c)
 {
 	if (c == '\n'){
         	terminal_row++;
-		terminal_column = -1; 
+		terminal_column = 0; 
 	}
 	else{
 		terminal_putentryat(c, terminal_color, terminal_column, terminal_row);
