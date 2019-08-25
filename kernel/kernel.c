@@ -13,10 +13,9 @@ void kernel_main(void)
 		writed(i);
 		write("\n");
 		if (i == 10000){
-			oops("BUFF_OVERFLOW")
+			oops("BUFF_OVERFLOW");
 		}
 	}
-	oops("BAD_FILENAME");
 	
 }
  
