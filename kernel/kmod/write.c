@@ -110,6 +110,31 @@ void write(const char* data)
 	terminal_write(data, strlen(data));
 }
 
+char* inttostr( int zahl ) 
+{ 
+   static char text[20];
+   int loc=19;
+   text[19] = 0;
+   while (zahl)
+   {
+       --loc;
+       text[loc] = (zahl%10)+'0';
+       zahl/=10;
+   }
+   if (loc==19)
+   {
+      --loc;
+       text[loc] = '0';
+   }
+   return &text[loc];
+}
+
+void writed(const int data){
+	char* m = inttostr(data)
+	terminal_write(m, strlen(m))
+}
+
+
 void clsdrv()
 {
 	for (int c = 0; c < 2000; c++){
