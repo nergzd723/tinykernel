@@ -105,9 +105,9 @@ void write(const char* data)
 void clsdrv()
 {
 	for (int c = 0; c < 2000; c++){
+		
 		write(" ");
-		if (terminal_row == 80){
-			break;
-		}
 	}
+	terminal_row = 0;
+	terminal_column = 0;
 }
