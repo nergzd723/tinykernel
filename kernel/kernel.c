@@ -12,6 +12,9 @@ void kernel_main(void)
 	for (int i = 0; i<1000000; i++){
 		writed(i);
 		write("\n");
+		if (i == 10000){
+			oops("BUFF_OVERFLOW")
+		}
 	}
 	oops("BAD_FILENAME");
 	
