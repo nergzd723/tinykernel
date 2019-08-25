@@ -6,7 +6,7 @@
 
 void kernel_main(void) 
 {
-	terminal_setcolor(15,0)
+	terminal_setcolor(15,0);
 	init();
 	write("Hello, kernel World!\n");
 	printart();
