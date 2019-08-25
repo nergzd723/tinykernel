@@ -12,7 +12,7 @@ all:
 	$(TDIR)$(cc)-gcc -T $(boot)linker.ld -o tinykernel.bin -ffreestanding -O2 -nostdlib boot.o panic.o write.o kernel.o -lgcc
 	grub-file --is-x86-multiboot tinykernel.bin
 	mkdir -p isodir/boot/grub
-	cp myos.bin isodir/boot/tinykernel.bin
+	cp tinykernel.bin isodir/boot/tinykernel.bin
 	cp grub.cfg isodir/boot/grub/grub.cfg
 	grub-mkrescue -o tinykernel.iso isodir
 	cp isodir/boot/tinykernel.iso tinykernel.iso
