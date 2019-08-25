@@ -1,4 +1,4 @@
-cc = i686-elf
+cc = i686-x0r3d-elf
 boot = $(kernel)bootstrap/
 kernel = kernel/
 kmod = $(kernel)kmod/
