@@ -9,7 +9,7 @@ void kernel_main(void)
 {
 	init();
 	write("Hello, kernel World!\n");
-	oops();
+	oops("BAD_FILENAME");
 	
 }
  
