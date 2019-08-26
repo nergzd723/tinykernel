@@ -9,7 +9,6 @@
 .long MAGIC
 .long FLAGS
 .long CHECKSUM
-
 .section .bss
 .align 16
 stack_bottom:
@@ -17,6 +16,7 @@ stack_bottom:
 stack_top:
 .section .text
 .global _start
+.global outb
 .type _start, @function
  outb:
     mov al, [esp + 8]
