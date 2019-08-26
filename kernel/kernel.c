@@ -15,7 +15,7 @@ void kernel_main(void)
 	init();
 	int b = 0;
 	int a = 1/0;
-	for (int i = 0; i<100000; i++)
+	for (int i = 0; i<1000000000; i++)
 	{
 		b++;
 		writed(b);
