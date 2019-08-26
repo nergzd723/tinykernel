@@ -5,4 +5,4 @@ This microkernel is written on C
 No one
 ## Warranties
 No one
-#####W Will be discontinued soon
+##### Will be discontinued soon
