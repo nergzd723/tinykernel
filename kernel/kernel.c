@@ -19,6 +19,7 @@ void kernel_main(void)
 	{
 		b++;
 		writed(b);
+		write('\n\);
 	}
 }
  
