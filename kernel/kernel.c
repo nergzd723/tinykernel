@@ -4,7 +4,11 @@
 #include "kernel.h"
 #include "rw.h"
 #include "video.h"
-
+int divide(int a, int b)
+{
+	int c;
+	c = a/b;
+}
 void kernel_main(void) 
 {
 	init();
@@ -16,5 +20,6 @@ void kernel_main(void)
 		writed(b);
 	}
 	printart();
+	divide(1,0);
 }
  
