@@ -8,7 +8,6 @@ void kernel_main(void)
 {
 	init();
 	long b = 0;
-	halt();
 	for (long i = 0; i<1000000000; i++)
 	{
 		b++;
