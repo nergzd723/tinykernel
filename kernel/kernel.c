@@ -21,6 +21,5 @@ void kernel_main(void)
 		b = b/2;
 		writed(b);
 	}
-	printart();
 }
  
