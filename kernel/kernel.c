@@ -22,6 +22,5 @@ void kernel_main(void)
 		writed(b);
 	}
 	printart();
-	int a = 1/0;
 }
  
