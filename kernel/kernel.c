@@ -11,7 +11,7 @@ void kernel_main(void)
 	int b = 0;
 	for (int i = 0; i<100000; i++)
 	{
-		b++
+		b++;
 	}
 	printart();
 }
