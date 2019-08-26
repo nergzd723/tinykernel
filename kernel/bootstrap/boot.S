@@ -18,11 +18,6 @@ stack_top:
 .global _start
 .global outb
 .type _start, @function
- outb:
-    mov al, esp
-    mov dx, esp
-    out dx, al
-    ret  
 _start:
     mov $stack_top, %esp
     call kernel_main
