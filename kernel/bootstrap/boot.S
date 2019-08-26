@@ -15,10 +15,14 @@
 stack_bottom:
 .skip 16384 # 16 KiB
 stack_top:
-
 .section .text
 .global _start
 .type _start, @function
+ outb:
+    mov al, [esp + 8]
+    mov dx, [esp + 4]
+    out dx, al
+    ret  
 _start:
     mov $stack_top, %esp
     call kernel_main
