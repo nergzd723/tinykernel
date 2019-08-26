@@ -12,7 +12,6 @@ void kernel_main(void)
 	{
 		b++;
 		writed(b);
-		oops("KMOD");
 		
 	}
 }
