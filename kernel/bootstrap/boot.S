@@ -19,8 +19,8 @@ stack_top:
 .global outb
 .type _start, @function
  outb:
-    mov al, [esp + 8]
-    mov dx, [esp + 4]
+    mov al, esp
+    mov dx, esp
     out dx, al
     ret  
 _start:
