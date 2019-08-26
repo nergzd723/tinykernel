@@ -11,7 +11,7 @@ void kernel_main(void)
 	for (long i = 0; i<1000000000; i++)
 	{
 		b++;
-		write("ЯДРООООООО");
+		writed(b);
 		
 	}
 }
