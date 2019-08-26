@@ -17,6 +17,11 @@ stack_top:
 .section .text
 .global _start
 .global outb
+.global halt
+halt:
+    cli
+1:  hlt
+    jmp 1b
 .type _start, @function
 _start:
     mov $stack_top, %esp
