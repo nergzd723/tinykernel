@@ -5,7 +5,7 @@ kmod = $(kernel)kmod/
 flags = -std=gnu99 -ffreestanding -O2 -Wall -Wextra -Iinclude
 TDIR = ~/i686-x0r3d-elf/bin/
 all:
-	nasm -f elf32 $(boot)boot.S -o boot.o
+	$(TDIR)$(cc)-as $(boot)boot.S -o boot.o
 	$(TDIR)$(cc)-gcc -c $(kernel)kernel.c -o kernel.o $(flags)
 	$(TDIR)$(cc)-gcc -c $(kmod)panic.c -o panic.o $(flags)
 	$(TDIR)$(cc)-gcc -c $(kmod)write.c -o write.o $(flags)
