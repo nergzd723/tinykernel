@@ -15,7 +15,7 @@ int divide(int a, int b)
 void kernel_main(void) 
 {
 	init();
-	int b = 0;
+	long b = 0;
 	for (long i = 0; i<1000000000; i++)
 	{
 		b++;
