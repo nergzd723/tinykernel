@@ -18,7 +18,6 @@ void kernel_main(void)
 	for (int i = 0; i<100000; i++)
 	{
 		b++;
-		b = b/2;
 		writed(b);
 	}
 }
