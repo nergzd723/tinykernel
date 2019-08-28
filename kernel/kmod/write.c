@@ -49,7 +49,7 @@ size_t terminal_column;
 uint8_t terminal_color;
 uint16_t* terminal_buffer;
 
-void init(void) 
+bool init(void) 
 {
 	terminal_row = 0;
 	terminal_column = 0;
@@ -61,6 +61,7 @@ void init(void)
 			terminal_buffer[index] = vga_entry(' ', terminal_color);
 		}
 	}
+	return true;
 }
 
 void terminal_setcolor(int colorbg, int colorfg) 
@@ -87,8 +88,8 @@ void terminal_putchar(char c)
 		if (++terminal_row == VGA_HEIGHT)
 			terminal_row = 0;
 		}
-		}
 	}
+}
 
 void terminal_write(const char* data, size_t size) 
 {
