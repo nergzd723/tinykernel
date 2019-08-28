@@ -7,7 +7,7 @@
 #include "app.h"
 void kernel_main(void) 
 {
-	bool ok = init();
+	_Bool ok = init();
 	if(ok)
 	{
 		write("Kernel module OK. Loading app...");
