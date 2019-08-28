@@ -21,6 +21,6 @@ void call_app(int m)
   }
   else
   {
-    oops("STRANGE_THINGS_HAPPEN")
+    oops("STRANGE_THINGS_HAPPEN");
   }
 }
