@@ -6,7 +6,14 @@
 #include "serial.h"
 void kernel_main(void) 
 {
-	init();
-	printart();
+	ok = init();
+	if(ok)
+	{
+		call_app(true);
+	}
+	else
+	{
+		panic("TERMINAL_ERR");
+	}
 }
  
