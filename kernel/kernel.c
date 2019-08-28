@@ -11,7 +11,7 @@ void kernel_main(void)
 	if(ok)
 	{
 		write("Kernel module OK. Loading app...");
-		call_app(2);
+		call_app(3);
 	}
 	else
 	{
