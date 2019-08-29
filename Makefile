@@ -7,6 +7,7 @@ TDIR = ~/i686-x0r3d-elf/bin/
 all:
 	$(TDIR)$(cc)-as $(boot)boot.S -o boot.o
 	$(TDIR)$(cc)-gcc -c $(kernel)kernel.c -o kernel.o $(flags)
+	$(TDIR)$(cc)-gcc -c $(kmod)irq.c -o irq.o $(flags)
 	nasm -f elf $(kmod)io.s && cp $(kmod)io.o io.o
 	$(TDIR)$(cc)-gcc -c $(kmod)panic.c -o panic.o $(flags)
 	$(TDIR)$(cc)-gcc -c $(kmod)write.c -o write.o $(flags)
