@@ -31,7 +31,8 @@ void kernel_main(void)
 	init();
 	initialize_gdt();
 	log("Loading app\n");
-	printf("Kernel module OK. Loading app...");
-	call_app(4);
+	printf("Kernel module OK. Loading app...\n");
+	warn("Bad app name!");
+	printf("Hello World!\n");
 }
  
