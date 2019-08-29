@@ -5,6 +5,8 @@
 #include "app.h"
 #include "dsph.h"
 #include "types.h"
+#include "irq.h"
+
 struct gdt_description_structure_t {
   uint16_t size;
   uint32_t offset;
@@ -33,6 +35,7 @@ struct interrupt_descriptor_t {
   uint8_t type_attr;
   uint16_t offset_16_31;
 } __attribute__((packed));
+
 enum segment_selector_t {
   NULL_DESCRIPTOR,
   KERNAL_CODE_SEGMENT_INDEX,
