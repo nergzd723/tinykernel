@@ -5,6 +5,10 @@
 #include "oopsh.h"
 #include "serial.h"
 
+void cls()
+{
+  clsdrv();
+}
 void init()
 {
   t_init();
