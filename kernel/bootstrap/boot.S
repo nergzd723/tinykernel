@@ -16,7 +16,18 @@ stack_bottom:
 stack_top:
 .section .text
 .global _start
-.global outb
+global outb
+outb:
+    mov al, [esp + 8]
+    mov dx, [esp + 4]
+    out dx, al 
+    ret
+global inb
+inb:
+    mov dx, [esp + 4]
+    in  al, dx
+    ret
+
 .global halt
 halt:
     cli
