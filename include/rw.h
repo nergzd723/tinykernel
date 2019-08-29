@@ -4,6 +4,7 @@ void write(const char* data);
 _Bool init(void);
 void printart();
 void clsdrv();
+void lgdt(void * gdt);
 void outb(unsigned short port, unsigned char data);
 unsigned char inb(unsigned short port);
 void serial_print(unsigned short com, char * s);
