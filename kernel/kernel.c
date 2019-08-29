@@ -14,7 +14,7 @@ void kernel_main(void)
 	{
 		serial_print(SERIAL_COM1_BASE, "Loading app\n");
 		write("Kernel module OK. Loading app...");
-		call_app(3);
+		call_app(4);
 	}
 	else
 	{
