@@ -4,6 +4,8 @@
 #include "oopsh.h"
 #include "app.h"
 #include "dsph.h"
+#include "rw.h"
+#include "serialif.h"
 struct gdt_t {
   unsigned int address;
   unsigned short size;
