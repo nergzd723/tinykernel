@@ -15,9 +15,6 @@ lgdt:
   lgdt [edx]
   ret
 global interrupt_handler
-interrupt_handler:
-    mov eax, 0xDEADBEEF
-    jmp $
 global  load_idt
 load_idt:
   mov     eax, [esp+4]
