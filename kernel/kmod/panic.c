@@ -2,7 +2,7 @@
 #include "oopsh.h"
 #include "dsp.h"
 void oops(char* errmsg){
-    log("Got exception, \n Panicked successfully!");
+    log("Got exception, Panicked successfully!");
     log(errmsg);
     cls();
     printf("\n\n\n\n\n\n\n\n\n\n");
