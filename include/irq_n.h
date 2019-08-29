@@ -1,4 +1,5 @@
-
+#ifndef INCLUDE_INTERRUPTS_H
+#define INCLUDE_INTERRUPTS_H
 #include "types.h"
 struct cpu_state {
   uint32_t eax;
@@ -10,12 +11,11 @@ struct cpu_state {
   uint32_t esp;
   uint32_t ebp;
 } __attribute__((packed));
-
 struct stack_state {
   uint32_t error_code;
   uint32_t eip;
   uint32_t cs;
   uint32_t eflags;
 } __attribute__((packed));
-
-void interrupt_handler(struct cpu_state cpu, uint32_t interrupt_number, uint32_t error_code)
+void interrupt_handler(struct cpu_state cpu, uint32_t interrupt_number, uint32_t error_code);
+#endif /* INCLUDE_INTERRUPTS_H */
