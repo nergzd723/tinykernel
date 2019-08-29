@@ -1,7 +1,6 @@
 #include <stdint.h>
 #include "rw.h"
 #include "kernel.h"
-#include "serial.h"
 void oops(char* errmsg){
     clsdrv();
     write("\n\n\n\n\n\n\n\n\n\n");
