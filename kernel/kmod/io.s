@@ -1,3 +1,4 @@
+extern interrupt_handler
 global outb
 outb:
     mov al, [esp + 8]
@@ -24,7 +25,7 @@ global interrupt
 interrupt:
   mov eax, [esp+4]
   int 49
-extern interrupt_handler
+
 global interrupt_handler_49
 interrupt_handler_49:
   push    dword 0
