@@ -4,7 +4,7 @@
 void oops(char* errmsg){
     log("Got exception, \n Panicked successfully!");
     log(errmsg);
-    clsdrv();
+    cls();
     printf("\n\n\n\n\n\n\n\n\n\n");
     printf("An error occured!\nThe error code is");
     printf("\n\n");
