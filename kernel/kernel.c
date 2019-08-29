@@ -12,6 +12,7 @@ void kernel_main(void)
 	_Bool ok = init();
 	if(ok)
 	{
+		serial_print(SERIAL_COM1_BASE, "Loading app");
 		write("Kernel module OK. Loading app...");
 		call_app(3);
 	}
@@ -19,5 +20,5 @@ void kernel_main(void)
 	{
 		oops("TERMINAL_ERR");
 	}
-}}
+}
  
