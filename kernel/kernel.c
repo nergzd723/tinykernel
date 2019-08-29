@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include "kernel.h"
 #include "rw.h"
-#include "serial.h"
+#include "serialif.h"
 #include "app.h"
 void kernel_main(void) 
 {
