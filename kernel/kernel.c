@@ -46,9 +46,6 @@ const uint16_t KERNAL_DATA_SEGMENT_SELECTOR = sizeof(struct segment_descriptor_t
 struct interrupt_descriptor_t idt[256];
 
 void initialize_gdt() {
-
-  gdt.address = (int16) segment_descriptors;
-  gdt.size = sizeof(segment_descriptors);
   gdt_description_structure.size = sizeof(gdt) - 1;
   gdt_description_structure.offset = (uint32_t) gdt;
   gdt[KERNAL_CODE_SEGMENT_INDEX].limit_0_15 = 0xFFFF;
