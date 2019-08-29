@@ -1,7 +1,7 @@
 #ifndef RW_H
 #define RW_H
 void write(const char* data);
-_Bool init(void);
+void t_init(void);
 void printart();
 void clsdrv();
 void lgdt(void * gdt);
