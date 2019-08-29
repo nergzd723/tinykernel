@@ -34,5 +34,7 @@ void kernel_main(void)
 	printf("Kernel module OK. Loading app...\n");
 	warn("Bad app name!");
 	printf("Hello World!\n");
+	warn("Bad app name!");
+	warn("Bad app name!");
 }
  
