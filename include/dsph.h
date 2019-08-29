@@ -30,7 +30,7 @@ void init()
   t_init();
   serial_init(SERIAL_COM1_BASE);
   initialize_gdt();
-  log("GDT, terminal and serial init!")
+  log("GDT, terminal and serial init!");
 }
 void log(char* data)
 {
@@ -39,7 +39,7 @@ void log(char* data)
 void printf(char* data)
 {
   write(data);
-  log("Wrote to screen")
+  log("Wrote to screen");
 }
 void warn(char* data)
 {
