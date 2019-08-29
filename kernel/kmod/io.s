@@ -14,3 +14,7 @@ lgdt:
   mov edx, [esp + 4]
   lgdt [edx]
   ret
+global interrupt_handler
+interrupt_handler:
+    mov eax, 0xDEADBEEF
+    jmp $
