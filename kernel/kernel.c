@@ -97,6 +97,5 @@ void kernel_main(void)
 	warn("Bad app name!");
 	printf("Hello World!\n");
 	warn("Bad app name!");
-	interrupt(49);
 }
  
