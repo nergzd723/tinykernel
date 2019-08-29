@@ -1,8 +1,9 @@
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-#include "kernel.h"
+#include "oopsh.h"
 #include "app.h"
+#include "dsph.h"
 
 void kernel_main(void) 
 {
