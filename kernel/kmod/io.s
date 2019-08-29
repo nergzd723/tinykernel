@@ -56,3 +56,7 @@ common_interrupt_handler:
   add     esp, 8
   
   iret
+
+global enable_hardware_interrupts
+enable_hardware_interrupts:
+  sti
