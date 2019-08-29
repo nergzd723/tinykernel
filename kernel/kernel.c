@@ -19,5 +19,5 @@ void kernel_main(void)
 	{
 		oops("TERMINAL_ERR");
 	}
-}
+}}
  
