@@ -1,10 +1,10 @@
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-#include "kernel.h"
+#include "dsph.h"
 #include "rw.h"
-#include "serial.h"
 #include "video.h"
+
 void call_app(int m)
 {
   if(m == 1)
