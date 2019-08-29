@@ -56,4 +56,6 @@ void serial_print(unsigned short com, char * s) {
         while (!serial_is_transmit_fifo_empty(com)) {}
         outb(SERIAL_DATA_PORT(com), s[i]);
         i++;
+    }
+}
 #endif
