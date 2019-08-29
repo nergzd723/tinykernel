@@ -1,6 +1,6 @@
 #include <stdint.h>
 #include "oopsh.h"
-#include "dsph.h"
+#include "dsp.h"
 void oops(char* errmsg){
     log("Got exception, \n Panicked successfully!");
     log(errmsg);
