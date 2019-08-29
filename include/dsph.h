@@ -3,6 +3,7 @@
 #include "rw.h"
 #include "serialif.h"
 #include "oopsh.h"
+#include "serial.h"
 
 void init()
 {
