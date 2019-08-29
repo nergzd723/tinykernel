@@ -12,7 +12,7 @@ void kernel_main(void)
 	_Bool ok = init();
 	if(ok)
 	{
-		serial_print(SERIAL_COM1_BASE, "Loading app");
+		serial_print(SERIAL_COM1_BASE, "Loading app\n");
 		write("Kernel module OK. Loading app...");
 		call_app(3);
 	}
