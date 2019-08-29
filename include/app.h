@@ -1,7 +1,7 @@
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-#include "dsph.h"
+#include "dsp.h"
 #include "rw.h"
 #include "video.h"
 
