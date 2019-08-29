@@ -9,3 +9,8 @@ inb:
     mov dx, [esp + 4]
     in  al, dx
     ret
+global lgdt
+lgdt:
+  mov edx, [esp + 4]
+  lgdt [edx]
+  ret
