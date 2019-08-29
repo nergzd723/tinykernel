@@ -13,7 +13,7 @@ void init()
 {
   t_init();
   serial_init(SERIAL_COM1_BASE);
-  log("GDT, terminal and serial init!");
+  log("GDT, terminal and serial init!\n");
 }
 void log(char* data)
 {
@@ -22,12 +22,12 @@ void log(char* data)
 void printf(char* data)
 {
   write(data);
-  log("Wrote to screen");
+  log("Wrote to screen\n");
 }
 void warn(char* data)
 {
   log(data);
-  write("\n\n\nWarning!");
+  write("\n\n\nWarning!\n");
   write(data);
 }
 #endif
