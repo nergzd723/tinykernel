@@ -4,8 +4,8 @@
 #include "serialif.h"
 #include "logh.h"
 void oops(char* errmsg){
-    log(SERIAL_COM1_BASE, "Got exception, \n Panicked successfully!");
-    log(SERIAL_COM1_BASE, errmsg);
+    log("Got exception, \n Panicked successfully!");
+    log(errmsg);
     clsdrv();
     write("\n\n\n\n\n\n\n\n\n\n");
     write("An error occured!\nThe error code is");
