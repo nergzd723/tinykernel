@@ -18,4 +18,4 @@ struct stack_state {
   uint32_t eflags;
 } __attribute__((packed));
 
-void interrupt_handler(struct cpu_state cpu, struct stack_state stack, uint32_t interrupt);
+void interrupt_handler(struct cpu_state cpu, uint32_t interrupt_number, uint32_t error_code)
