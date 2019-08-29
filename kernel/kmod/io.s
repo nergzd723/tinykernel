@@ -18,3 +18,12 @@ global interrupt_handler
 interrupt_handler:
     mov eax, 0xDEADBEEF
     jmp $
+global  load_idt
+load_idt:
+  mov     eax, [esp+4]
+  lidt    [eax]
+  ret
+global interrupt
+interrupt:
+  mov eax, [esp+4]
+  int 49
