@@ -27,6 +27,7 @@ void printf(char* data)
 void warn(char* data)
 {
   log(data);
+  log("Warning!\n");
   write("\n\n\nWarning!\n");
   write(data);
 }
