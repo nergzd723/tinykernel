@@ -36,5 +36,12 @@ void kernel_main(void)
 	printf("Hello World!\n");
 	warn("Bad app name!");
 	warn("Bad app name!");
+	warn("Bad app name!");
+	warn("Bad app name!");
+	warn("Bad app name!");
+	warn("Bad app name!");
+	warn("Bad app name!");
+	warn("Bad app name!");
+	
 }
  
