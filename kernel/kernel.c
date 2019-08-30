@@ -351,6 +351,7 @@ void kernel_main(void)
 {
 	init();
 	initialize_gdt();
+	initialize_idt();
 	enable_keyboard_interrupts();
   	log("Loaded interrupt descriptor table.");
 	log("Loading app");
