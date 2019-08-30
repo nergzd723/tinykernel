@@ -1,4 +1,4 @@
-
+#include "irq.h"
 #include "apic.h"
 #include "rw.h"
 
