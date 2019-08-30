@@ -3,6 +3,7 @@
 #include "types.h"
 #include "irq.h"
 #include "apic.h"
+#include "kbd.h"
 
 void interrupt_handler(uint32_t interrupt_number, uint32_t error_code)
 {
