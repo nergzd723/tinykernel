@@ -6,6 +6,7 @@
 #include "dsph.h"
 #include "types.h"
 #include "irq.h"
+#include "irq_set.h"
 
 struct gdt_description_structure_t {
   uint16_t size;
