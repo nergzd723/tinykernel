@@ -7,13 +7,17 @@
 void interrupt_handler(uint32_t interrupt_number, uint32_t error_code)
 {
   switch(interrupt_number) {
-    case(0x00000009):
+    case(0x00000020):
+    case(0x00000021):
       consume_scan_code();
-      pic_acknowledge(interrupt_number);
+      log("returned from consume_scan_code()");
+      pic_acknowledge();
+      log("returned from pic_acknowledge()");
       break;
     default:
       log("Unhandled Interrupt");
       warn("Got IRQ, DINFO in serial");
+      pic_acknowledge();
       break;
   }
   return;
