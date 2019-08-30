@@ -351,12 +351,7 @@ void initialize_idt() {
 void kernel_main(void) 
 {
 	init();
-	initialize_gdt();
 	initialize_idt();
 	pic_init();
-  	log("Initialized PIC");
-  	log("Loaded interrupt descriptor table.");
-	log("Loading app");
-	printf("Kernel module OK. Loading app...\n");
 }
  
