@@ -357,7 +357,6 @@ void kernel_main(void)
   	log("Initialized PIC");
   	log("Loaded interrupt descriptor table.");
 	log("Loading app");
-	interrupt(49);
 	printf("Kernel module OK. Loading app...\n");
 }
  
