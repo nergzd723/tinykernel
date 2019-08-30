@@ -353,7 +353,7 @@ void kernel_main(void)
 	init();
 	initialize_gdt();
 	initialize_idt();
-	initialize_pic();
+	pic_init();
   	log("Initialized PIC");
   	log("Loaded interrupt descriptor table.");
 	log("Loading app");
