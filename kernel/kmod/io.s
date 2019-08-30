@@ -1,5 +1,4 @@
 extern interrupt_handler
-global outb
 global interrupt_handler_0
 interrupt_handler_0:
   push    dword 0
