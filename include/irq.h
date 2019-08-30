@@ -4,5 +4,6 @@ void load_idt(void * idt);
 void interrupt(uint32_t interrupt_number);
 void enable_hardware_interrupts();
 void enable_keyboard_interrupts();
-
+void outb(unsigned short port, unsigned char data);
+unsigned char inb(unsigned short port);
 
