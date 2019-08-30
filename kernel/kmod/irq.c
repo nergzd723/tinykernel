@@ -6,7 +6,6 @@
 
 void interrupt_handler(uint32_t interrupt_number, uint32_t error_code)
 {
-  if (cpu.eax) {}; // Avoid unused parameter error
   switch(interrupt_number) {
     case(0x00000009):
       consume_scan_code();
