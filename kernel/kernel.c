@@ -7,6 +7,7 @@
 #include "types.h"
 #include "irq.h"
 #include "irq_set.h"
+#include "apic.h"
 
 struct gdt_description_structure_t {
   uint16_t size;
@@ -78,7 +79,7 @@ uint32_t interrupt_handler_addresses[] = {
   (uint32_t) interrupt_handler_6,
   (uint32_t) interrupt_handler_7,
   (uint32_t) interrupt_handler_8,
-  (uint32_t) interrupt_handler_9,
+  (uint32_t) keyboard_handler,
   (uint32_t) interrupt_handler_10,
   (uint32_t) interrupt_handler_11,
   (uint32_t) interrupt_handler_12,
@@ -352,12 +353,21 @@ void kernel_main(void)
 	init();
 	initialize_gdt();
 	initialize_idt();
-	enable_keyboard_interrupts();
+  	pic_init();
+  	log("Initialized PIC");
   	log("Loaded interrupt descriptor table.");
 	log("Loading app");
 	printf("Kernel module OK. Loading app...\n");
-	warn("Bad app name!");
 	printf("Hello World!\n");
-	warn("Bad app name!");
+	  uint32_t i = 0;
+
+
+
+  while(1) {
+    if (i++ == 0x0FFFFFFF) {
+      log("tick");
+      i = 0;
+    }
+  };
 }
  
