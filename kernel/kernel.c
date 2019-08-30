@@ -354,7 +354,6 @@ void kernel_main(void)
 	initialize_idt();
   	log("Loaded interrupt descriptor table.");
 	log("Loading app");
-	enable_keyboard_interrupts();
 	printf("Kernel module OK. Loading app...\n");
 	warn("Bad app name!");
 	printf("Hello World!\n");
