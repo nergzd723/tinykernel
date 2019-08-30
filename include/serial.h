@@ -7,6 +7,8 @@
 #define SERIAL_MODEM_COMMAND_PORT(base) (base + 4)
 #define SERIAL_LINE_STATUS_PORT(base)   (base + 5)
 #define SERIAL_LINE_ENABLE_DLAB         0x80
+#include "rw.h"
+#include "irq.h"
 void serial_configure_baud_rate(unsigned short com, unsigned short divisor)
 {
     outb(SERIAL_LINE_COMMAND_PORT(com),
