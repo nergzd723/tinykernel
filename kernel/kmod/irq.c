@@ -15,8 +15,6 @@ void interrupt_handler(uint32_t interrupt_number, uint32_t error_code)
       log("returned from pic_acknowledge()");
       break;
     default:
-      log("Unhandled Interrupt");
-      warn("Got IRQ, DINFO in serial");
       pic_acknowledge();
       break;
   }
