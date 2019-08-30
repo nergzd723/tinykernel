@@ -354,5 +354,6 @@ void kernel_main(void)
 	initialize_idt();
 	initialize_gdt();
 	pic_init();
+	while(1) {}
 }
  
