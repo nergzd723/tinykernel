@@ -2,14 +2,21 @@
 #include "rw.h"
 #include "types.h"
 #include "irq.h"
+#include "apic.h"
 
 void interrupt_handler(uint32_t interrupt_number, uint32_t error_code)
 {
-  warn("Got IRQ, DINFO in serial");
-  log("error_code: ");
-  log(error_code);
-  log("interrupt_number: ");
-  log(interrupt_number);
+  if (cpu.eax) {}; // Avoid unused parameter error
+  switch(interrupt_number) {
+    case(0x00000009):
+      consume_scan_code();
+      pic_acknowledge(interrupt_number);
+      break;
+    default:
+      log("Unhandled Interrupt");
+      warn("Got IRQ, DINFO in serial");
+      break;
+  }
   return;
 }
 void enable_keyboard_interrupts() {
