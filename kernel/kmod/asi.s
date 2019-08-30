@@ -91,17 +91,24 @@ global interrupt
 ;        [esp    ] the return address
 
 interrupt:
-
   mov eax, [esp+4]
-
   int 49
+global keyboard_handler
 
 
 
+keyboard_handler:
+  push eax
+  in al, 60h   ;; read information from the keyboard
+  mov dx, 3F8h
+  out dx, al 
+  mov al, 20h
+  mov dx, 20h
+  out dx, al
+  pop eax
+  iret
+  
 global enable_hardware_interrupts
-
-; enable_hardware_interrupts
-
 enable_hardware_interrupts:
 
   sti
