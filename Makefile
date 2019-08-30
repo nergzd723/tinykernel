@@ -7,8 +7,8 @@ TDIR = ~/i686-x0r3d-elf/bin/
 all:
 	$(TDIR)$(cc)-as $(boot)boot.S -o boot.o
 	$(TDIR)$(cc)-gcc -c $(kernel)kernel.c -o kernel.o $(flags)
-	$(TDIR)$(cc)-gcc -c $(kernel)kbd.c -o kbd.o $(flags)
-	$(TDIR)$(cc)-gcc -c $(kernel)apic.c -o apic.o $(flags)
+	$(TDIR)$(cc)-gcc -c $(kmod)kbd.c -o kbd.o $(flags)
+	$(TDIR)$(cc)-gcc -c $(kmod)apic.c -o apic.o $(flags)
 	$(TDIR)$(cc)-gcc -c $(kmod)irq.c -o irq.o $(flags)
 	$(TDIR)$(cc)-gcc -c $(kmod)panic.c -o panic.o $(flags)
 	$(TDIR)$(cc)-gcc -c $(kmod)write.c -o write.o $(flags)
