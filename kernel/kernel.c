@@ -353,10 +353,10 @@ void kernel_main(void)
 	init();
 	initialize_gdt();
 	initialize_idt();
-  	pic_init();
   	log("Initialized PIC");
   	log("Loaded interrupt descriptor table.");
 	log("Loading app");
+	interrupt(49);
 	printf("Kernel module OK. Loading app...\n");
 	printf("Hello World!\n");
 	  uint32_t i = 0;
