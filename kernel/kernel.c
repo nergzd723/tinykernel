@@ -352,7 +352,7 @@ void kernel_main(void)
 	init();
 	initialize_gdt();
 	initialize_idt();
-	enable_hardware_interrupts();
+	enable_keyboard_interrupts();
   	log("Loaded interrupt descriptor table.");
 	log("Loading app");
 	printf("Kernel module OK. Loading app...\n");
