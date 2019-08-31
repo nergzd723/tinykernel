@@ -2,8 +2,8 @@ extern interrupt_handler ; the C interrupt handler
 
 global interrupt_handler_0
 interrupt_handler_0:
-  push    dword 0
-  push    dword 0
+  push    dword 5
+  push    dword 15
   jmp     common_interrupt_handler
 
 global interrupt_handler_1
