@@ -1,6 +1,7 @@
 #ifndef RW_H
 #define RW_H
 void write(const char* data);
+char* inttostr(int zahl);
 void t_init(void);
 void printart();
 void clsdrv();
