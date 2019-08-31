@@ -5,6 +5,12 @@
 #include "oopsh.h"
 #include "serial.h"
 
+char* logd(long data)
+{
+  char* c = inttostr(data);
+  log(c);
+  log(" ");
+}
 void cls()
 {
   clsdrv();
