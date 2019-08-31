@@ -26,7 +26,7 @@ align 4                         ; the code must be 4 byte aligned
                                 ; 'dd' declares initialized date
     dd FLAGS                    ; the flags,
     dd CHECKSUM                 ; and the checksum
-loader:
+_start:
     mov eax, 0xCAFEBABE
     mov esp, kernel_stack + KERNEL_STACK_SIZE
     jmp kernel_main
