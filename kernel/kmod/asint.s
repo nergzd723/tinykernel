@@ -1,4 +1,4 @@
-extern interrupt_handler
+extern interrupt_handler ; the C interrupt handler
 
 global interrupt_handler_0
 interrupt_handler_0:
@@ -58,7 +58,7 @@ global interrupt_handler_9
 interrupt_handler_9:
   push    dword 0
   push    dword 9
-  jmp     common_interrupt_handler
+  jmp common_interrupt_handler
 
 global interrupt_handler_10
 interrupt_handler_10:
@@ -86,7 +86,7 @@ interrupt_handler_13:
 
 global interrupt_handler_14
 interrupt_handler_14:
-  push    dword 0
+  ; don't push an error code, the cpu will do that
   push    dword 14
   jmp     common_interrupt_handler
 
@@ -772,7 +772,7 @@ global interrupt_handler_128
 interrupt_handler_128:
   push    dword 0
   push    dword 128
-  jmp     common_interrupt_handler
+  jmp     interrupt_handler_with_return_value
 
 global interrupt_handler_129
 interrupt_handler_129:
@@ -1544,15 +1544,16 @@ common_interrupt_handler:               ; the common parts of the generic interr
   push    edx
   push    esi
   push    edi
-  push    esp
   push    ebp
+  mov     eax, cr2
+  push    eax
 
   ; call the C function
   call    interrupt_handler
 
   ; restore the registers
+  add    esp, 4 ; cr2
   pop    ebp
-  pop    esp
   pop    edi
   pop    esi
   pop    edx
@@ -1560,8 +1561,38 @@ common_interrupt_handler:               ; the common parts of the generic interr
   pop    ebx
   pop    eax
 
-  ; restore the esp
+  ; pop error_code and interrupt_number off the stack
   add     esp, 8
+
+  ; return to the code that got interrupted
+  iret
+
+interrupt_handler_with_return_value:
+  push    eax
+  push    ebx
+  push    ecx
+  push    edx
+  push    esi
+  push    edi
+  push    ebp
+  mov     eax, cr2
+  push    eax
+
+  ; call the C function
+  call    interrupt_handler
+
+  ; restore the registers
+  add    esp, 4 ; cr2
+  pop    ebp
+  pop    edi
+  pop    esi
+  pop    edx
+  pop    ecx
+  pop    ebx
+  ; don't pop eax. It contains the return value
+
+  ; pop eax, error_code and interrupt_number off the stack
+  add     esp, 12
 
   ; return to the code that got interrupted
   iret
