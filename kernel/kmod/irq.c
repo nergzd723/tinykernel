@@ -18,6 +18,7 @@ void interrupt_handler(uint32_t interrupt_number, uint32_t error_code)
     default:
       //pic_acknowledge();
       logd(interrupt_number);
+      logd(error_code);
       break;
   }
   return;
