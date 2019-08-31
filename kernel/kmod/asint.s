@@ -2,8 +2,8 @@ extern interrupt_handler ; the C interrupt handler
 
 global interrupt_handler_0
 interrupt_handler_0:
-  push    dword 5
-  push    dword 15
+  push    dword 0
+  push    dword 0
   jmp     common_interrupt_handler
 
 global interrupt_handler_1
@@ -1549,7 +1549,7 @@ common_interrupt_handler:               ; the common parts of the generic interr
   push    eax
 
   ; call the C function
-  call    interrupt_handler
+;  call    interrupt_handler
 
   ; restore the registers
   add    esp, 4 ; cr2
