@@ -34,3 +34,8 @@ section .bss                        ; Use the 'bss' section for the stack
     align 4                         ; align at 4 bytes for performance reasons
     kernel_stack:                   ; label points to beginning of memory
         resb KERNEL_STACK_SIZE
+global halt
+halt:
+  cli
+  hlt
+  jmp $
