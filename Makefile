@@ -5,8 +5,8 @@ kmod = $(kernel)kmod/
 flags = -std=gnu99 -ffreestanding -O2 -Wall -Wextra -Iinclude
 TDIR = ~/i686-x0r3d-elf/bin/
 all:
-	cd $(boot) && nasm -f elf nasm_boot.s && cp nasm_boot.o ~/tinykernel/boot.o
-#	$(TDIR)$(cc)-as $(boot)boot.S -o boot.o
+#	cd $(boot) && nasm -f elf nasm_boot.s && cp nasm_boot.o ~/tinykernel/boot.o
+	$(TDIR)$(cc)-as $(boot)boot.S -o boot.o
 	$(TDIR)$(cc)-gcc -c $(kernel)kernel.c -o kernel.o $(flags)
 	$(TDIR)$(cc)-gcc -c $(kmod)kbd.c -o kbd.o $(flags)
 	$(TDIR)$(cc)-gcc -c $(kmod)apic.c -o apic.o $(flags)
