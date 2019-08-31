@@ -1537,34 +1537,6 @@ interrupt_handler_255:
   jmp     common_interrupt_handler
 
 common_interrupt_handler:               ; the common parts of the generic interrupt handler
-  ; save the registers
-  push    eax
-  push    ebx
-  push    ecx
-  push    edx
-  push    esi
-  push    edi
-  push    ebp
-  mov     eax, cr2
-  push    eax
-
-  ; call the C function
-;  call    interrupt_handler
-
-  ; restore the registers
-  add    esp, 4 ; cr2
-  pop    ebp
-  pop    edi
-  pop    esi
-  pop    edx
-  pop    ecx
-  pop    ebx
-  pop    eax
-
-  ; pop error_code and interrupt_number off the stack
-  add     esp, 8
-
-  ; return to the code that got interrupted
   iret
 
 interrupt_handler_with_return_value:
