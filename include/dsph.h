@@ -5,7 +5,7 @@
 #include "oopsh.h"
 #include "serial.h"
 
-char* logd(long data)
+void logd(long data)
 {
   char* c = inttostr(data);
   log(c);
