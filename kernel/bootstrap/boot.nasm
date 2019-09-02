@@ -28,7 +28,7 @@ loader:
     mov eax, 0xCAFEBABE
     mov esp, kernel_stack + KERNEL_STACK_SIZE
     cli
-    lgdt [gdtr]
+    lgdt [gdt]
     mov eax, cr0 
     or al, 1
     mov cr0, eax
