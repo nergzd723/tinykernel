@@ -53,7 +53,9 @@ void kernel_main(void)
 {
 	init();
 	initialize_gdt();
+	protectedmode();
 	log("Protected mode ON");
 	printf("Hello World!");
+	halt();
 }
  
