@@ -52,11 +52,6 @@ void kernel_main(void)
 {
 	init();
 	initialize_gdt();
-	log("Loading app");
-	printf("Kernel module OK. Loading app...\n");
-	warn("Bad app name!");
-	printf("Hello World!\n");
-	warn("Bad app name!");
-	
+	log("Protected mode ON")
 }
  
