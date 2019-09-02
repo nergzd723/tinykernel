@@ -20,6 +20,10 @@ align 4
     dd MAGIC_NUMBER
     dd FLAGS
     dd CHECKSUM 
+global halt
+halt:
+    cli
+    hlt
 loader:
     mov eax, 0xCAFEBABE
     mov esp, kernel_stack + KERNEL_STACK_SIZE
