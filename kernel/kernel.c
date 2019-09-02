@@ -52,6 +52,6 @@ void kernel_main(void)
 {
 	init();
 	initialize_gdt();
-	log("Protected mode ON")
+	log("Protected mode ON");
 }
  
