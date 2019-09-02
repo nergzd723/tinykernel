@@ -27,7 +27,10 @@ halt:
 loader:
     mov eax, 0xCAFEBABE
     mov esp, kernel_stack + KERNEL_STACK_SIZE
+    cli
     jmp kernel_main
+    cli
+    jmp $
 
 section .bss
     align 4
