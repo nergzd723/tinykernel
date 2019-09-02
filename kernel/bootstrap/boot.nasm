@@ -24,14 +24,16 @@ global halt
 halt:
     cli
     hlt
-loader:
-    mov eax, 0xCAFEBABE
-    mov esp, kernel_stack + KERNEL_STACK_SIZE
+global protectedmode
+protectedmode:
     cli
     lgdt [gdt]
-    mov eax, cr0 
+    mov eax, cr0
     or al, 1
     mov cr0, eax
+loader:
+    mov eax, 0xCAFEBABE
+    mov esp, kernel_stack + KERNEL_STACK_SIZE   
     jmp kernel_main
     cli
     jmp $
