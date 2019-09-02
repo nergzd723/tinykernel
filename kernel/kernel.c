@@ -5,6 +5,7 @@
 #include "app.h"
 #include "dsph.h"
 #include "types.h"
+
 struct gdt_t {
   unsigned int address;
   unsigned short size;
