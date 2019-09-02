@@ -1,28 +1,56 @@
-ENTRY(_start)
 
-SECTIONS
-{
-    . = 1M;
-    .text BLOCK(4K) : ALIGN(4K)
-	{
-		*(.multiboot)
-		*(.text)
-	}
+ENTRY(loader)                /* the name of the entry label */
 
-	.rodata BLOCK(4K) : ALIGN(4K)
-	{
-		*(.rodata)
-	}
+                             /* argument is a symbol name exported by and object
 
-	.data BLOCK(4K) : ALIGN(4K)
-	{
-		*(.data)
-	}
+                             file that we're linking */
 
-	.bss BLOCK(4K) : ALIGN(4K)
-	{
-		*(COMMON)
-		*(.bss)
-	}
-    
+
+
+SECTIONS {
+
+    . = 0x00100000;          /* the code should be loaded at 1 MB */
+
+
+
+    .text ALIGN (0x1000) :   /* align at 4 KB, the size of a page */
+
+    {
+
+        *(.text)             /* all text sections from all files */
+
+    }
+
+
+
+    .rodata ALIGN (0x1000) : /* align at 4 KB, the size of a page */
+
+    {
+
+        *(.rodata*)          /* all read-only data sections from all files */
+
+    }
+
+
+
+    .data ALIGN (0x1000) :   /* align at 4 KB, the size of a page */
+
+    {
+
+        *(.data)             /* all data sections from all files */
+
+    }
+
+
+
+    .bss ALIGN (0x1000) :    /* align at 4 KB, the size of a page */
+
+    {
+
+        *(COMMON)            /* all COMMON sections from all files */
+
+        *(.bss)              /* all bss sections from all files */
+
+    }
+
 }
