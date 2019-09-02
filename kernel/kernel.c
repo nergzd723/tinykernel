@@ -53,6 +53,7 @@ void kernel_main(void)
 	init();
 	initialize_gdt();
 	log("Protected mode ON");
+	warn("WOWOOOOO");
 	halt();
 }
  
