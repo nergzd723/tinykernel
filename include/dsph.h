@@ -11,7 +11,6 @@ void cls()
 }
 void init()
 {
-  t_init();
   serial_init(SERIAL_COM1_BASE);
   log("GDT, terminal and serial init!");
 }
