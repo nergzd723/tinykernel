@@ -65,13 +65,6 @@ unsigned short segment_selectors[] = {
   (0x08 << 4), // kernel code segment
   (0x10 << 4), // kernel data segment
 };
-
-void initialize_gdt() {
-  gdt.address = (unsigned short) segment_selectors;
-  gdt.size = sizeof(segment_selectors);
-  lgdt(&gdt);
-}
-
 void kernel_main(void) 
 {
 	init();
