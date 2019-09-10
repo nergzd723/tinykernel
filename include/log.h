@@ -5,11 +5,6 @@
 #include "oopsh.h"
 #include "serial.h"
 
-void logd(long data)
-{
-  log(data);
-  log(" ");
-}
 void cls()
 {
   clsdrv();
@@ -36,5 +31,11 @@ void warn(char* data)
   log("Warning!");
   write("\n\n\nWarning!\n");
   write(data);
+}
+
+void logd(long data)
+{
+  log(data);
+  log(" ");
 }
 #endif
