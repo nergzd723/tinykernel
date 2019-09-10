@@ -1,6 +1,6 @@
 #include <stdint.h>
 #include "rw.h"
-#include "kernel.h"
+#include "oopsh.h"
 #include "serialif.h"
 #include "logh.h"
 void oops(char* errmsg){
