@@ -5,6 +5,7 @@
 #include "rw.h"
 #include "serialif.h"
 #include "app.h"
+#include "log.h"
 
 struct gdt_t {
   unsigned int address;
@@ -32,7 +33,7 @@ void kernel_main(void)
 {
 	serial_init(SERIAL_COM1_BASE);
 	log(SERIAL_COM1_BASE, "Hello World!\n");
-	_Bool ok = init();
+	init();
 	initialize_gdt();
 	log(SERIAL_COM1_BASE, "Loaded global descriptor table.\n");
 	
@@ -40,7 +41,6 @@ void kernel_main(void)
 	{
 		log(SERIAL_COM1_BASE, "Loading app\n");
 		write("Kernel module OK. Loading app...");
-		call_app(4);
 	}
 	else
 	{
