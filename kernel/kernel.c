@@ -94,7 +94,7 @@ void initialize_idt() {
   }
   load_idt(&idt_description_structure);
 
-void kernel_main(void) 
+void kmain() 
 {
   	initialize_gdt();
   	initialize_idt();
