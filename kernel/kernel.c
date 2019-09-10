@@ -6,6 +6,7 @@
 #include "serialif.h"
 #include "app.h"
 #include "log.h"
+#include "typo.h"
 
 struct gdt_t {
   int32 address;
