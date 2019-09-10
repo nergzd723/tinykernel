@@ -49,7 +49,7 @@ size_t terminal_column;
 uint8_t terminal_color;
 uint16_t* terminal_buffer;
 
-bool init(void) 
+void t_init(void) 
 {
 	terminal_row = 0;
 	terminal_column = 0;
