@@ -46,7 +46,7 @@ int serial_is_transmit_fifo_empty(unsigned int com)
 
 }
 
-void log(unsigned short com, char * s) {
+void serial_write(unsigned short com, char * s) {
 
     int i = 0;
 
@@ -56,7 +56,7 @@ void log(unsigned short com, char * s) {
         i++;
     }
 }
-void logc(unsigned short com, char c) {
+void serial_writec(unsigned short com, char c) {
     while (!serial_is_transmit_fifo_empty(com)) {}
     outb(SERIAL_DATA_PORT(com), c);
 }
