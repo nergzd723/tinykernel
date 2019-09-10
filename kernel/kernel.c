@@ -102,8 +102,8 @@ void kernel_main(void)
 	log("Hello World!\n");
 	log("Loaded global descriptor table.\n");
 	log("Loading app\n");
-  interrupt(49);
+  	interrupt(49);
 	printf("Kernel module OK. Loading app...");
 	halt();
 }
- 
+}
