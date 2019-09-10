@@ -1,10 +1,11 @@
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
-#include "kernel.h"
+#include "oops.h"
 #include "rw.h"
 #include "serialif.h"
 #include "app.h"
+
 struct gdt_t {
   unsigned int address;
   unsigned short size;
@@ -26,6 +27,7 @@ void initialize_gdt() {
   gdt.size = sizeof(segment_selectors);
   lgdt(&gdt);
 }
+
 void kernel_main(void) 
 {
 	serial_init(SERIAL_COM1_BASE);
