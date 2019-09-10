@@ -31,16 +31,14 @@ void initialize_gdt() {
 
 void kernel_main(void) 
 {
-	serial_init(SERIAL_COM1_BASE);
-	log(SERIAL_COM1_BASE, "Hello World!\n");
 	init();
-	initialize_gdt();
-	log(SERIAL_COM1_BASE, "Loaded global descriptor table.\n");
+	log("Hello World!\n");
+	log("Loaded global descriptor table.\n");
 	
 	if(ok)
 	{
-		log(SERIAL_COM1_BASE, "Loading app\n");
-		write("Kernel module OK. Loading app...");
+		log("Loading app\n");
+		printf("Kernel module OK. Loading app...");
 	}
 	else
 	{
