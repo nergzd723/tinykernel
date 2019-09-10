@@ -31,7 +31,7 @@ enum segment_selector_t {
 struct segment_descriptor_t segment_descriptors[3];
 
 void initialize_gdt() {
-  gdt.address = int16 segment_descriptors;
+  gdt.address = (int16) segment_descriptors;
   gdt.size = sizeof(segment_descriptors);
 
   segment_descriptors[KERNAL_CODE_SEGMENT].base_0_15 = 0x0;
