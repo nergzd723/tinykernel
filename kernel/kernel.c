@@ -79,7 +79,7 @@ void initialize_gdt() {
 void initialize_idt() {
   idt_description_structure.size = sizeof(idt) - 1;
   idt_description_structure.offset = (uint32_t) idt;
-  uint32_t interrupt_handler_address = (uint32_t) &interrupt_handler_0;
+  uint32_t interrupt_handler_address = (uint32_t) &interrupt_handler;
   uint16_t offset_0_15 = interrupt_handler_address & 0x0000FFFF;
   uint16_t offset_16_31 = interrupt_handler_address >> 16;
   uint16_t selector = KERNAL_CODE_SEGMENT_SELECTOR;
