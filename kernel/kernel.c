@@ -50,21 +50,8 @@ void initialize_gdt() {
 
   // Grub has already loaded the segment registers
   // with the correct values (0x8 for cs, 0x10 for the others)
-}struct gdt_t {
-  unsigned int address;
-  unsigned short size;
-} __attribute__((packed)) gdt;
+}
 
-struct segment_selector {
-  unsigned short address;
-  unsigned short size;
-} __attribute__((packed));
-
-unsigned short segment_selectors[] = {
-  0x0, // null descriptor
-  (0x08 << 4), // kernel code segment
-  (0x10 << 4), // kernel data segment
-};
 void kernel_main(void) 
 {
 	init();
