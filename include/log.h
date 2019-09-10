@@ -7,8 +7,7 @@
 
 void logd(long data)
 {
-  char* c = inttostr(data);
-  log(c);
+  log(data);
   log(" ");
 }
 void cls()
