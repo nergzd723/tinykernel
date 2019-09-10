@@ -5,6 +5,7 @@
 #include "rw.h"
 #include "serialif.h"
 #include "app.h"
+#include "irq.h"
 #include "log.h"
 #include "types.h"
 // a pointer to the global descriptor table
