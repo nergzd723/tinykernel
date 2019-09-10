@@ -2,7 +2,7 @@
 #include "rw.h"
 #include "oopsh.h"
 #include "serialif.h"
-#include "logh.h"
+#include "dsp.h"
 void oops(char* errmsg){
     log(SERIAL_COM1_BASE, "Got exception, \n Panicked successfully!");
     log(SERIAL_COM1_BASE, errmsg);
