@@ -37,7 +37,6 @@ void warn(char* data)
 
 void logd(long data)
 {
-  log(data);
   log(" ");
 }
 #endif
