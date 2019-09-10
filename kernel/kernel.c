@@ -34,15 +34,8 @@ void kernel_main(void)
 	init();
 	log("Hello World!\n");
 	log("Loaded global descriptor table.\n");
-	
-	if(ok)
-	{
-		log("Loading app\n");
-		printf("Kernel module OK. Loading app...");
-	}
-	else
-	{
-		oops("TERMINAL_ERR");
-	}
+	log("Loading app\n");
+	printf("Kernel module OK. Loading app...");
+	halt();
 }
  
