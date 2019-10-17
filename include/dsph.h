@@ -4,6 +4,7 @@
 #include "serialif.h"
 #include "oopsh.h"
 #include "serial.h"
+#include "fb.h"
 
 void logd(long data)
 {
@@ -28,7 +29,7 @@ void log(char* data)
 }
 void printf(char* data)
 {
-  write(data);
+  fb_write(data);
   log("Wrote to screen");
 }
 void warn(char* data)
